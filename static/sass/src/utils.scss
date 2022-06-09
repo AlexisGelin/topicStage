@@ -71,3 +71,11 @@ small,
 .text_small {
     font-size: 0.8rem;
 }
+
+//Responsive
+$breakpoint-4k:2560px;
+$breakpoint-2k:1440px;
+$breakpoint-desktop:1280px;
+$breakpoint-tablet-landscape:1280px;
+$breakpoint-tablet:768px;
+$breakpoint-phone-landscape:480px;

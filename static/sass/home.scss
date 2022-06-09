@@ -3,6 +3,14 @@
     margin: 1rem;
     padding: 3rem;
     @include neumo-deep(200px);
+    >img {
+        @include tablet {
+            width: -webkit-fill-available;
+        }
+    }
+    @include tablet {
+        width: -webkit-fill-available;
+    }
 }
 
 .content {
@@ -41,6 +49,9 @@
                     display: grid;
                     grid-template-columns: repeat(3, 1fr);
                     justify-items: center;
+                    @include tablet {
+                        grid-template-columns: repeat(1, 1fr);
+                    }
                 }
                 .description {
                     margin-top: 1rem;
@@ -49,7 +60,11 @@
                     min-height: 5rem;
                     @include neumo-deep(200px);
                 }
+                @include tablet {}
             }
+        }
+        @include tablet {
+            width: 100%;
         }
     }
 }

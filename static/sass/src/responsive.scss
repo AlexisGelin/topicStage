@@ -1,0 +1,36 @@
+//Responsive 
+@mixin desktop-4K {
+    @media (max-width: $breakpoint-4k) {
+        @content;
+    }
+}
+
+@mixin desktop-2K {
+    @media (max-width: $breakpoint-2k) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (max-width: $breakpoint-desktop) {
+        @content;
+    }
+}
+
+@mixin tablet-landscape {
+    @media (max-width: $breakpoint-tablet-landscape) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: $breakpoint-tablet) {
+        @content;
+    }
+}
+
+@mixin phone-landscape {
+    @media (max-width: $breakpoint-phone-landscape) {
+        @content;
+    }
+}
