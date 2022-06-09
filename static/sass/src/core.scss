@@ -1,0 +1,84 @@
+@import "utils.scss";
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    background: $base-color;
+    color: $text-color;
+    min-width: 400px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+body {
+    >*:not(:first-child) {
+        margin-top: 1rem;
+    }
+}
+
+nav {
+    margin: 1rem;
+    padding: 1rem;
+    width: 90%;
+    max-width: 2560px;
+    @include neumo-flat(200px);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    >:first-child {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    >:last-child {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        >*:not(:first-child) {
+            margin-left: 20px;
+        }
+    }
+    a {
+        color: $text-color;
+        text-decoration: none;
+        transition: all 0.3s;
+        &:hover {
+            transition: all 0.3s;
+            color: $text-hover-color;
+        }
+    }
+}
+
+.content {
+    flex: 1;
+    max-width: 2560px;
+    margin: 1rem;
+    padding: 1rem;
+    width: 90%;
+    @include neumo-flat(200px);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer {
+    margin: 1rem;
+    padding: 1rem;
+    max-width: 2560px;
+    display: flex;
+    justify-content: center;
+    @include neumo-flat(200px);
+}

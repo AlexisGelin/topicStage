@@ -1,0 +1,73 @@
+@import "./src/core.scss";
+.header-image {
+    margin: 1rem;
+    padding: 3rem;
+    @include neumo-deep(200px);
+}
+
+.content {
+    >h3 {
+        margin: 2rem;
+    }
+    .col {
+        padding: 1rem;
+    }
+    .all-article {
+        display: grid;
+        width: 80%;
+        a {
+            color: $text-color;
+            text-decoration: none;
+            .article {
+                margin: 1rem;
+                padding: 1rem;
+                min-height: 10rem;
+                @include neumo-balloon(200px);
+                background: linear-gradient(130deg, #f0f0f0, #cacaca, #f0f0f0);
+                background-size: 400% 400%;
+                animation: hollowToBalloon 1s ease;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                &:hover {
+                    background-position: 70% 100%;
+                    animation: balloonToHollow 1s ease;
+                }
+                &:active {
+                    @include neumo-hollow(200px);
+                }
+                .header {
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    justify-items: center;
+                }
+                .description {
+                    margin-top: 1rem;
+                    padding: 1rem;
+                    width: 100%;
+                    min-height: 5rem;
+                    @include neumo-deep(200px);
+                }
+            }
+        }
+    }
+}
+
+@keyframes balloonToHollow {
+    0% {
+        background-position: 0% 0%
+    }
+    100% {
+        background-position: 70% 100%
+    }
+}
+
+@keyframes hollowToBalloon {
+    0% {
+        background-position: 70% 100%
+    }
+    100% {
+        background-position: 0% 0%
+    }
+}
