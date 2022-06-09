@@ -126,6 +126,9 @@ footer {
   margin: 2rem; }
 .content .col {
   padding: 1rem; }
+  @media (max-width: 768px) {
+    .content .col {
+      padding: 0rem; } }
 .content .all-article {
   display: grid;
   width: 80%; }

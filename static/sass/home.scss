@@ -19,6 +19,9 @@
     }
     .col {
         padding: 1rem;
+        @include tablet {
+            padding: 0rem;
+        }
     }
     .all-article {
         display: grid;
@@ -60,7 +63,6 @@
                     min-height: 5rem;
                     @include neumo-deep(200px);
                 }
-                @include tablet {}
             }
         }
         @include tablet {
