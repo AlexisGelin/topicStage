@@ -14,8 +14,15 @@ $text-hover-color: rgba(7,
 $shadow-color-bright: #bebebe;
 $shadow-color-dark: #ffffff;
 $radius: 10px;
+$round-radius: 50%;
 @mixin neumo-flat($size) {
     border-radius: $radius;
+    background: $base-color;
+    box-shadow: $size/30 $size/30 $size/15 $shadow-color-bright, $size/30*-1 $size/30*-1 $size/15 $shadow-color-dark;
+}
+
+@mixin neumo-image($size) {
+    border-radius: $round-radius;
     background: $base-color;
     box-shadow: $size/30 $size/30 $size/15 $shadow-color-bright, $size/30*-1 $size/30*-1 $size/15 $shadow-color-dark;
 }

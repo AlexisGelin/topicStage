@@ -1,0 +1,23 @@
+@import "./src/core.scss";
+.content {
+    >h3 {
+        margin: 2rem;
+    }
+    >h5 {
+        margin: 1rem;
+        width: 90%;
+    }
+    .mission {
+        margin: 1rem;
+        padding: 1rem;
+        width: 90%;
+        min-height: 20rem;
+        @include neumo-deep(200px);
+    }
+    .mission-light {
+        margin: 1rem;
+        padding: 1rem;
+        width: 90%;
+        @include neumo-deep(200px);
+    }
+}

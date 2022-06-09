@@ -1,0 +1,74 @@
+@import "./src/core.scss";
+.content {
+    >h3 {
+        margin: 2rem;
+    }
+    >h5 {
+        margin: 1rem;
+        margin-bottom: 2rem;
+        width: 90%;
+    }
+    .contact {
+        margin: 1rem;
+        padding: 1rem;
+        width: 90%;
+        min-height: 20rem;
+        @include neumo-deep(200px);
+    }
+    .container-contact {
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+        div {
+            margin-bottom: 1rem;
+            width: fit-content;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            a {
+                color: $text-color;
+                text-decoration: none;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                img {
+                    padding: 1rem;
+                    width: 100px;
+                    @include neumo-balloon(100px);
+                    background: linear-gradient(130deg, #f0f0f0, #cacaca, #f0f0f0);
+                    background-size: 400% 400%;
+                    animation: hollowToBalloon 0.3s ease;
+                    &:hover {
+                        background-position: 75% 100%;
+                        animation: balloonToHollow 0.3s ease;
+                    }
+                    &:active {
+                        @include neumo-hollow(100px);
+                    }
+                }
+            }
+            >h5 {
+                margin-top: 1rem;
+            }
+        }
+    }
+}
+
+@keyframes balloonToHollow {
+    0% {
+        background-position: 0% 0%
+    }
+    100% {
+        background-position: 75% 100%
+    }
+}
+
+@keyframes hollowToBalloon {
+    0% {
+        background-position: 75% 100%
+    }
+    100% {
+        background-position: 0% 0%
+    }
+}

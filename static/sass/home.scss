@@ -36,13 +36,13 @@
                 @include neumo-balloon(200px);
                 background: linear-gradient(130deg, #f0f0f0, #cacaca, #f0f0f0);
                 background-size: 400% 400%;
-                animation: hollowToBalloon 1s ease;
+                animation: hollowToBalloon 0.3s ease;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 &:hover {
-                    background-position: 70% 100%;
-                    animation: balloonToHollow 1s ease;
+                    background-position: 75% 100%;
+                    animation: balloonToHollow 0.3s ease;
                 }
                 &:active {
                     @include neumo-hollow(200px);
@@ -76,13 +76,13 @@
         background-position: 0% 0%
     }
     100% {
-        background-position: 70% 100%
+        background-position: 75% 100%
     }
 }
 
 @keyframes hollowToBalloon {
     0% {
-        background-position: 70% 100%
+        background-position: 75% 100%
     }
     100% {
         background-position: 0% 0%

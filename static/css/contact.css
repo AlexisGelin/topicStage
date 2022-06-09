@@ -109,71 +109,55 @@ footer {
   background: #e0e0e0;
   box-shadow: 6.6666666667px 6.6666666667px 13.3333333333px #bebebe, -6.6666666667px -6.6666666667px 13.3333333333px #ffffff; }
 
-.header-image {
+.content > h3 {
+  margin: 2rem; }
+.content > h5 {
   margin: 1rem;
-  padding: 3rem;
+  margin-bottom: 2rem;
+  width: 90%; }
+.content .contact {
+  margin: 1rem;
+  padding: 1rem;
+  width: 90%;
+  min-height: 20rem;
   border-radius: 10px;
   background: #e0e0e0;
   box-shadow: inset 6.6666666667px 6.6666666667px 13.3333333333px #bebebe, inset -6.6666666667px -6.6666666667px 13.3333333333px #ffffff; }
-  @media (max-width: 768px) {
-    .header-image > img {
-      width: -webkit-fill-available; } }
-  @media (max-width: 768px) {
-    .header-image {
-      width: -webkit-fill-available; } }
-
-.content > h3 {
-  margin: 2rem; }
-.content .col {
-  padding: 1rem; }
-  @media (max-width: 768px) {
-    .content .col {
-      padding: 0rem; } }
-.content .all-article {
+.content .container-contact {
+  width: 90%;
   display: grid;
-  width: 80%; }
-  .content .all-article a {
-    color: #070b11;
-    text-decoration: none; }
-    .content .all-article a .article {
-      margin: 1rem;
-      padding: 1rem;
-      min-height: 10rem;
-      border-radius: 10px;
-      background: linear-gradient(145deg, #f0f0f0, #cacaca);
-      box-shadow: 6.6666666667px 6.6666666667px 13.3333333333px #bebebe, -6.6666666667px -6.6666666667px 13.3333333333px #ffffff;
-      background: linear-gradient(130deg, #f0f0f0, #cacaca, #f0f0f0);
-      background-size: 400% 400%;
-      animation: hollowToBalloon 0.3s ease;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center; }
+  .content .container-contact div {
+    margin-bottom: 1rem;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .content .container-contact div a {
+      color: #070b11;
+      text-decoration: none;
       display: flex;
       flex-direction: column;
       align-items: center; }
-      .content .all-article a .article:hover {
-        background-position: 75% 100%;
-        animation: balloonToHollow 0.3s ease; }
-      .content .all-article a .article:active {
-        border-radius: 10px;
-        background: linear-gradient(145deg, #cacaca, #f0f0f0);
-        box-shadow: 6.6666666667px 6.6666666667px 13.3333333333px #bebebe, -6.6666666667px -6.6666666667px 13.3333333333px #ffffff; }
-      .content .all-article a .article .header {
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        justify-items: center; }
-        @media (max-width: 768px) {
-          .content .all-article a .article .header {
-            grid-template-columns: repeat(1, 1fr); } }
-      .content .all-article a .article .description {
-        margin-top: 1rem;
+      .content .container-contact div a img {
         padding: 1rem;
-        width: 100%;
-        min-height: 5rem;
+        width: 100px;
         border-radius: 10px;
-        background: #e0e0e0;
-        box-shadow: inset 6.6666666667px 6.6666666667px 13.3333333333px #bebebe, inset -6.6666666667px -6.6666666667px 13.3333333333px #ffffff; }
-  @media (max-width: 768px) {
-    .content .all-article {
-      width: 100%; } }
+        background: linear-gradient(145deg, #f0f0f0, #cacaca);
+        box-shadow: 3.3333333333px 3.3333333333px 6.6666666667px #bebebe, -3.3333333333px -3.3333333333px 6.6666666667px #ffffff;
+        background: linear-gradient(130deg, #f0f0f0, #cacaca, #f0f0f0);
+        background-size: 400% 400%;
+        animation: hollowToBalloon 0.3s ease; }
+        .content .container-contact div a img:hover {
+          background-position: 75% 100%;
+          animation: balloonToHollow 0.3s ease; }
+        .content .container-contact div a img:active {
+          border-radius: 10px;
+          background: linear-gradient(145deg, #cacaca, #f0f0f0);
+          box-shadow: 3.3333333333px 3.3333333333px 6.6666666667px #bebebe, -3.3333333333px -3.3333333333px 6.6666666667px #ffffff; }
+    .content .container-contact div > h5 {
+      margin-top: 1rem; }
 
 @keyframes balloonToHollow {
   0% {
@@ -186,4 +170,4 @@ footer {
   100% {
     background-position: 0% 0%; } }
 
-/*# sourceMappingURL=home.css.map */
+/*# sourceMappingURL=contact.css.map */
