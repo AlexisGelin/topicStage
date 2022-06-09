@@ -74,7 +74,12 @@ nav {
       margin-left: 20px; }
     @media (max-width: 768px) {
       nav > :last-child {
-        display: none; } }
+        flex-direction: column;
+        align-items: flex-start; }
+        nav > :last-child > * {
+          margin-block: 1rem; }
+        nav > :last-child > *:not(:first-child) {
+          margin-left: 0px; } }
   nav a {
     color: #070b11;
     text-decoration: none;
@@ -139,7 +144,16 @@ footer {
       border-radius: 50%;
       background: #e0e0e0;
       box-shadow: 3.3333333333px 3.3333333333px 6.6666666667px #bebebe, -3.3333333333px -3.3333333333px 6.6666666667px #ffffff; }
+      @media (max-width: 480px) {
+        .content .container-employe div img {
+          width: 130px; } }
     .content .container-employe div > h5 {
       margin-top: 1rem; }
+  @media (max-width: 1280px) {
+    .content .container-employe {
+      grid-template-columns: repeat(4, 1fr); } }
+  @media (max-width: 768px) {
+    .content .container-employe {
+      grid-template-columns: repeat(2, 1fr); } }
 
 /*# sourceMappingURL=entreprise.css.map */

@@ -29,10 +29,19 @@
                 padding: 1rem;
                 width: 150px;
                 @include neumo-image(100px);
+                @include phone-landscape {
+                    width: 130px;
+                }
             }
             >h5 {
                 margin-top: 1rem;
             }
+        }
+        @include tablet-landscape {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        @include tablet {
+            grid-template-columns: repeat(2, 1fr);
         }
     }
 }

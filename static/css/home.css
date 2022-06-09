@@ -74,7 +74,12 @@ nav {
       margin-left: 20px; }
     @media (max-width: 768px) {
       nav > :last-child {
-        display: none; } }
+        flex-direction: column;
+        align-items: flex-start; }
+        nav > :last-child > * {
+          margin-block: 1rem; }
+        nav > :last-child > *:not(:first-child) {
+          margin-left: 0px; } }
   nav a {
     color: #070b11;
     text-decoration: none;

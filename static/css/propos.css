@@ -74,7 +74,12 @@ nav {
       margin-left: 20px; }
     @media (max-width: 768px) {
       nav > :last-child {
-        display: none; } }
+        flex-direction: column;
+        align-items: flex-start; }
+        nav > :last-child > * {
+          margin-block: 1rem; }
+        nav > :last-child > *:not(:first-child) {
+          margin-left: 0px; } }
   nav a {
     color: #070b11;
     text-decoration: none;
@@ -114,8 +119,7 @@ footer {
 .content > h5 {
   margin: 1rem;
   width: 90%; }
-
-.mission {
+.content .mission {
   margin: 1rem;
   padding: 1rem;
   width: 90%;
@@ -123,8 +127,7 @@ footer {
   border-radius: 10px;
   background: #e0e0e0;
   box-shadow: inset 6.6666666667px 6.6666666667px 13.3333333333px #bebebe, inset -6.6666666667px -6.6666666667px 13.3333333333px #ffffff; }
-
-.mission-light {
+.content .mission-light {
   margin: 1rem;
   padding: 1rem;
   width: 90%;

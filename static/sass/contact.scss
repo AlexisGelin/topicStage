@@ -21,7 +21,7 @@
         grid-template-columns: repeat(4, 1fr);
         justify-items: center;
         div {
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
             width: fit-content;
             display: flex;
             flex-direction: column;
@@ -51,6 +51,12 @@
             >h5 {
                 margin-top: 1rem;
             }
+        }
+        @include tablet {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include phone-landscape {
+            grid-template-columns: repeat(1, 1fr);
         }
     }
 }
