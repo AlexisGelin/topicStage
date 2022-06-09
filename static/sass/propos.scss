@@ -11,8 +11,11 @@
         margin: 1rem;
         padding: 1rem;
         width: 90%;
-        min-height: 20rem;
+        min-height: 10rem;
         @include neumo-deep(200px);
+        a {
+            color: $text-color;
+        }
     }
     .mission-light {
         margin: 1rem;

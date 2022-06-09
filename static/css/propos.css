@@ -123,10 +123,12 @@ footer {
   margin: 1rem;
   padding: 1rem;
   width: 90%;
-  min-height: 20rem;
+  min-height: 10rem;
   border-radius: 10px;
   background: #e0e0e0;
   box-shadow: inset 6.6666666667px 6.6666666667px 13.3333333333px #bebebe, inset -6.6666666667px -6.6666666667px 13.3333333333px #ffffff; }
+  .content .mission a {
+    color: #070b11; }
 .content .mission-light {
   margin: 1rem;
   padding: 1rem;
