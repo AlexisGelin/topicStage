@@ -1,51 +1,54 @@
-@import url('https://fonts.googleapis.com/css?family=Lexend+Deca:400');
+@use "sass:math";
+
+@import url('https:fonts.googleapis.com/css?family=Lexend+Deca:400');
 $base-color: #e0e0e0;
-$hollow-color:linear-gradient(145deg,
-#cacaca,
-#f0f0f0);
-$balloon-color:linear-gradient(145deg,
-#f0f0f0,
-#cacaca);
+$hollow-color: linear-gradient(145deg,
+        #cacaca,
+        #f0f0f0);
+$balloon-color: linear-gradient(145deg,
+        #f0f0f0,
+        #cacaca);
 $text-color: #070b11;
 $text-hover-color: rgba(7,
-11,
-17,
-0.6);
+        11,
+        17,
+        0.6);
 $shadow-color-bright: #bebebe;
 $shadow-color-dark: #ffffff;
 $radius: 10px;
 $round-radius: 50%;
+
 @mixin neumo-flat($size) {
     border-radius: $radius;
     background: $base-color;
-    box-shadow: $size/30 $size/30 $size/15 $shadow-color-bright, $size/30*-1 $size/30*-1 $size/15 $shadow-color-dark;
+    box-shadow: math.div($size, 30) math.div($size, 30) math.div($size, 15) $shadow-color-bright, math.div($size, 30)*-1 math.div($size, 30)*-1 math.div($size, 15) $shadow-color-dark;
 }
 
 @mixin neumo-image($size) {
     border-radius: $round-radius;
     background: $base-color;
-    box-shadow: $size/30 $size/30 $size/15 $shadow-color-bright, $size/30*-1 $size/30*-1 $size/15 $shadow-color-dark;
+    box-shadow: math.div($size, 30) math.div($size, 30) math.div($size, 15) $shadow-color-bright, math.div($size, 30)*-1 math.div($size, 30)*-1 math.div($size, 15) $shadow-color-dark;
 }
 
 @mixin neumo-deep($size) {
     border-radius: $radius;
     background: $base-color;
-    box-shadow: inset $size/30 $size/30 $size/15 $shadow-color-bright, inset $size/30*-1 $size/30*-1 $size/15 $shadow-color-dark;
+    box-shadow: inset math.div($size, 30) math.div($size, 30) math.div($size, 15) $shadow-color-bright, inset math.div($size, 30)*-1 math.div($size, 30)*-1 math.div($size, 15) $shadow-color-dark;
 }
 
 @mixin neumo-hollow($size) {
     border-radius: $radius;
     background: $hollow-color;
-    box-shadow: $size/30 $size/30 $size/15 $shadow-color-bright, $size/30*-1 $size/30*-1 $size/15 $shadow-color-dark;
+    box-shadow: math.div($size, 30) math.div($size, 30) math.div($size, 15) $shadow-color-bright, math.div($size, 30)*-1 math.div($size, 30)*-1 math.div($size, 15) $shadow-color-dark;
 }
 
 @mixin neumo-balloon($size) {
     border-radius: $radius;
     background: $balloon-color;
-    box-shadow: $size/30 $size/30 $size/15 $shadow-color-bright, $size/30*-1 $size/30*-1 $size/15 $shadow-color-dark;
+    box-shadow: math.div($size, 30) math.div($size, 30) math.div($size, 15) $shadow-color-bright, math.div($size, 30)*-1 math.div($size, 30)*-1 math.div($size, 15) $shadow-color-dark;
 }
 
-// Definitions des tailles de polices
+//Definitions des tailles de polices
 h1,
 h2,
 h3,
@@ -80,9 +83,9 @@ small,
 }
 
 //Responsive
-$breakpoint-4k:2560px;
-$breakpoint-2k:1440px;
-$breakpoint-desktop:1280px;
-$breakpoint-tablet-landscape:1280px;
-$breakpoint-tablet:768px;
-$breakpoint-phone-landscape:480px;
+$breakpoint-4k: 2560px;
+$breakpoint-2k: 1440px;
+$breakpoint-desktop: 1280px;
+$breakpoint-tablet-landscape: 1280px;
+$breakpoint-tablet: 768px;
+$breakpoint-phone-landscape: 480px;
