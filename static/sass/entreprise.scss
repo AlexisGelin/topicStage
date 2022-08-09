@@ -31,6 +31,8 @@
             img {
                 padding: 1rem;
                 width: 150px;
+                object-fit :cover;
+                height: 150px;
                 @include neumo-image(100px);
                 @include phone-landscape {
                     width: 130px;
