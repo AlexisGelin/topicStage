@@ -1,5 +1,11 @@
 @import "./src/core.scss";
 .content {
+
+    .confidential {
+        color: red;
+        text-align: center;
+    }
+
     >h3 {
         margin: 2rem;
     }

@@ -138,6 +138,10 @@ footer {
   box-shadow: 6.6666666667px 6.6666666667px 13.3333333333px #bebebe, -6.6666666667px -6.6666666667px 13.3333333333px #ffffff;
 }
 
+.content .confidential {
+  color: red;
+  text-align: center;
+}
 .content > h3 {
   margin: 2rem;
 }
